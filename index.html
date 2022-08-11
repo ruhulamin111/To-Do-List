@@ -17,22 +17,26 @@
         <div class="input-group my-3 w-50 mx-auto">
             <input id="input-field" type="text" class="form-control p-2" placeholder="Choose an item"
                 aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-success" type="button" id="add-button">Add</button>
+            <button class="btn btn-outline-success" type="button" id="add-button" onclick="addItem()">Add</button>
         </div>
 
-        <table class="table w-50 mx-auto border">
+        <table class="table w-50 mx-auto border my-5">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Summary</th>
-                    <th scope="col">Item</th>
+                    <th scope="col">No</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Remove</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Demo</th>
+            <tbody id="container">
+                <tr id="sub-container">
+                    <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>Demo</td>
+                    <td>
+                        <button onclick="" class="border-0 bg-danger text-white rounded ">Delete</button>
+
+                        <button onclick="" class="border-0 bg-success text-white rounded ">Done</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
