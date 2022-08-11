@@ -12,13 +12,27 @@ const addItem = () => {
         <th scope="row">${count}</th>
         <td>${inputValue}</td>
         <td>
-            <button onclick="" class="border-0 bg-danger text-white rounded ">
+            <button onclick="" class="btn btn-danger btn-delete">
             Delete</button>
-            <button onclick="" class="border-0 bg-success text-white rounded ">
+            <button onclick="" class="btn btn-success btn-done ">
             Done</button>
         </td>
-`;
+        `;
         container.appendChild(subContainer);
         document.getElementById('input-field').value = '';
+
+        const deleteButton = document.getElementsByClassName('btn-delete');
+        for (const button of deleteButton) {
+            button.addEventListener('click', function (event) {
+                event.target.parentNode.parentNode.style.display = 'none';
+            })
+        }
+        const doneButton = document.getElementsByClassName('btn-done');
+        for (const button of doneButton) {
+            button.addEventListener('click', function (event) {
+                event.target.parentNode.parentNode.style.display = 'none';
+            })
+        }
+
     }
 }
